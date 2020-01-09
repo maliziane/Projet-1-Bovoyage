@@ -1,11 +1,11 @@
-package fr.gtmprojet.destination_mock.DAO;
+package fr.gtm.projet.destination_mock.DAO;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.gtmprojet.destination_mock.entities.Destination;
-import fr.gtmprojet.destination_mock.entities.Formule;
+import fr.gtm.projet.destination_mock.entities.Destination;
+import fr.gtm.projet.destination_mock.entities.Formule;
 
 public class DestinationMockDao implements DestinationDao {
 

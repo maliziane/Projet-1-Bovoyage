@@ -1,4 +1,4 @@
-package fr.gtmprojet.destination_mock.service;
+package fr.gtm.projet.destination_mock.service;
 
 public class DestinationService {
 

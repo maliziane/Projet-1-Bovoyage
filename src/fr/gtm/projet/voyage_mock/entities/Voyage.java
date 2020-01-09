@@ -1,4 +1,4 @@
-package fr.gtm.voyage_mock.entities;
+package fr.gtm.projet.voyage_mock.entities;
 
 public class Voyage {
 

@@ -1,4 +1,4 @@
-package fr.gtm.voyage_mock.DAO;
+package fr.gtm.projet.voyage_mock.dao;
 
 public class VoyageMockDao implements VoyageDao {
 
