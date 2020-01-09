@@ -15,7 +15,14 @@ public class DestinationMockDao implements DestinationDao {
 List<Destination> destinations = new ArrayList<Destination>();
 List<Formule> allFormules = new ArrayList<Formule>();
 
-	private static long id = 0;
+private static long id = 0;
+
+	public DestinationMockDao() {
+	id = 0;
+}
+
+
+	
 	
 @Override
 public void creer(Destination d) {
@@ -38,9 +45,7 @@ public void supprimer(Formule f) {
 }
 
 @Override
-public void update(Formule f, LocalDate aller, LocalDate retour, double prix, int nbPlace, String description) {
-	f.setAller(aller);
-	f.setRetour(retour);
+public void update(Formule f, double prix, int nbPlace, String description) {
 	f.setPrix(prix);
 	f.setNbPlace(nbPlace);
 	f.setDescription(description);

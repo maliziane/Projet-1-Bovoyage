@@ -16,7 +16,7 @@ public interface DestinationDao {
 	List<Destination> findAllDestinations();
 	void creer(Formule f);
 	void supprimer(Formule f);
-	void update(Formule f, LocalDate aller, LocalDate retour, double prix, int nbPlace, String description);
+	void update(Formule f, double prix, int nbPlace, String description);
 	Formule findFormuleById(Long id);
 	
 	
