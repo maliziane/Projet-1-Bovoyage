@@ -1,5 +1,6 @@
 package fr.gtmprojet.destination_mock.DAO;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,14 +38,26 @@ public void supprimer(Formule f) {
 }
 
 @Override
-public void update(Formule f) {
-	// TODO Auto-generated method stub
+public void update(Formule f, LocalDate aller, LocalDate retour, double prix, int nbPlace, String description) {
+	f.setAller(aller);
+	f.setRetour(retour);
+	f.setPrix(prix);
+	f.setNbPlace(nbPlace);
+	f.setDescription(description);
 	
 }
 
+
 @Override
 public Formule findFormuleById(Long id) {
-	return null;
+	boolean test= false
+	for (Formule f:allFormules) {
+		if (f.getId()==id) {
+			return f;
+		}	
+	}
+	
+
 }
 @Override
 public void supprimer(Destination d) {
