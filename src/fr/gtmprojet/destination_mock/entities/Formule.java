@@ -59,13 +59,7 @@ public class Formule {
 		this.id = id;
 	}
 
-	public Formule(LocalDate aller, LocalDate retour, double prix, int nbPlace, String description, Long id) {
-		this.aller = aller;
-		this.retour = retour;
-		this.prix = prix;
-		this.nbPlace = nbPlace;
-		this.description = description;
-		this.id = id;
+	public Formule(){
 	}
 
 

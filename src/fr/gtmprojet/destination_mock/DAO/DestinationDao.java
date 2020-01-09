@@ -11,7 +11,7 @@ public interface DestinationDao {
 	
 	void creer(Destination d);
 	void supprimer(Destination d);
-	void update(Destination d);
+	void update(Destination d, String nom, String description);
 	Destination findDestinationById(Long id);
 	List<Destination> findAllDestinations();
 	void creer(Formule f);
