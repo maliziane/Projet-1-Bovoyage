@@ -1,6 +1,6 @@
 package fr.gtm.projet.voyage_mock.entities;
 
-import fr.gtm.voyage_mock.entities.Formule;
+import fr.gtm.projet.destination_mock.entities.Formule;
 
 public class Voyage {
 	
