@@ -1,11 +1,11 @@
-package fr.gtmprojet.destination_mock.DAO;
+package fr.gtm.projet.destination_mock.DAO;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.gtmprojet.destination_mock.entities.Destination;
-import fr.gtmprojet.destination_mock.entities.Formule;
+import fr.gtm.projet.destination_mock.entities.Destination;
+import fr.gtm.projet.destination_mock.entities.Formule;
 
 public class DestinationMockDao implements DestinationDao {
 
@@ -50,15 +50,16 @@ public void update(Formule f, LocalDate aller, LocalDate retour, double prix, in
 
 @Override
 public Formule findFormuleById(Long id) {
-	boolean test= false
-	for (Formule f:allFormules) {
+		for (Formule f:allFormules) {
 		if (f.getId()==id) {
 			return f;
 		}	
+	} return null;
 	}
+
 	
 
-}
+
 @Override
 public void supprimer(Destination d) {
 	destinations.remove(destinations.indexOf(d));
@@ -66,19 +67,25 @@ public void supprimer(Destination d) {
 }
 
 @Override
-public void update(Destination d) {
+public void update(Destination d, String nom, String description) {
+	d.setNom(nom);
+	d.setDescription(description);
 	
 }
 
 @Override
 public Destination findDestinationById(Long id) {
-	// TODO Auto-generated method stub
-	return null;
-}
+	for (Destination d:destinations) {
+		if (d.getId()==id) {
+			return d;
+		}	
+	} return null;
+	}
+
 
 @Override
 public List<Destination> findAllDestinations() {
-	return null;
+	return destinations;
 }
 
 

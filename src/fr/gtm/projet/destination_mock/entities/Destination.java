@@ -1,4 +1,4 @@
-package fr.gtmprojet.destination_mock.entities;
+package fr.gtm.projet.destination_mock.entities;
 
 import java.util.ArrayList;
 import java.util.List;

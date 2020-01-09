@@ -1,17 +1,17 @@
-package fr.gtmprojet.destination_mock.DAO;
+package fr.gtm.projet.destination_mock.DAO;
 
 import java.time.LocalDate;
 import java.util.List;
 
-import fr.gtmprojet.destination_mock.entities.Destination;
-import fr.gtmprojet.destination_mock.entities.Formule;
+import fr.gtm.projet.destination_mock.entities.Destination;
+import fr.gtm.projet.destination_mock.entities.Formule;
 
 public interface DestinationDao {
 //les fonction qui vont etre definie dans mock dao
 	
 	void creer(Destination d);
 	void supprimer(Destination d);
-	void update(Destination d);
+	void update(Destination d, String nom, String description);
 	Destination findDestinationById(Long id);
 	List<Destination> findAllDestinations();
 	void creer(Formule f);
