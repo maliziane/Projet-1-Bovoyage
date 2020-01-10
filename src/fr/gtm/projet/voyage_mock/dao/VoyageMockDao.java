@@ -25,6 +25,18 @@ import fr.gtm.projet.voyage_mock.entities.Voyageur;
 	v.setId(++id);
 	voyages.add(v);
 	}
+	
+	@Override
+	public void creer(Client c) {
+	v.setId(++id);
+	voyages.add(c);
+	}
+	
+	@Override
+	public void creer(Voyageur v1) {
+	v.setId(++id);
+	voyages.add(v1);
+	}
 
 	@Override
 	public void supprimer(Voyage v) {
