@@ -53,8 +53,19 @@ public class ClientTest {
 
 	@Test
 	public void testSetId() {
-		fail("Not yet implemented");
+		Client c1 = new Client("toto","0160794141");
+		Client c2 = new Client("toto","0160794141");
+	    VoyageMockDao dao= new VoyageMockDao();
+		assertNull(c1.getId());
+		dao.creer(c1);
+		dao.creer(c2);
+		Long a=1L, b=2L;
+		c1.setId(b);
+		assertEquals(c2.getId(),c1.getId());
+		
+	
 	}
+	
 
 	@Test
 	public void testClient() {
