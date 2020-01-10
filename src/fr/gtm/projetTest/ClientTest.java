@@ -46,6 +46,7 @@ public class ClientTest {
 		dao.creer(c2);
 		dao.creer(c3);
 		Long a=1L, b=2L, c=3L;
+		
 		assertEquals(b,c2.getId());
 		
 	
