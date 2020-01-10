@@ -12,7 +12,7 @@ public class DestinationMockDao implements DestinationDao {
 	
 	// code des methodes qui sont des destDAO interface
 
-List<Destination> destinations = new ArrayList<Destination>();
+private List<Destination> destinations = new ArrayList<Destination>();
 List<Formule> allFormules = new ArrayList<Formule>();
 
 private static long id = 0;
@@ -27,7 +27,7 @@ private static long id = 0;
 @Override
 public void creer(Destination d) {
 		d.setId(++id);
-		destinations.add(d);
+		findAllDestinations().add(d);
 	
 	}
 
@@ -67,7 +67,7 @@ public Formule findFormuleById(Long id) {
 
 @Override
 public void supprimer(Destination d) {
-	destinations.remove(destinations.indexOf(d));
+	findAllDestinations().remove(findAllDestinations().indexOf(d));
 	d.setId(null);
 }
 
@@ -80,26 +80,40 @@ public void update(Destination d, String nom, String description) {
 
 @Override
 public Destination findDestinationById(Long id) {
-	for (Destination d:destinations) {
+	for (Destination d:findAllDestinations()) {
 		if (d.getId()==id) {
 			return d;
 		}	
 	} return null;
-	}
+}
 
 
 @Override
 public List<Destination> findAllDestinations() {
 	return destinations;
 }
-
-
-
-
-
-
-
-
-
-
 }
+
+
+//
+//public List<Destination> getDestinations() {
+//	return destinations;
+//}
+//
+//
+//
+//
+//public void setDestinations(List<Destination> destinations) {
+//	this.destinations = destinations;
+//}
+
+
+
+
+
+
+
+
+
+
+
