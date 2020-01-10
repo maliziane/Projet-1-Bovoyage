@@ -1,8 +1,10 @@
-package fr.gtm.projet.voyage_mock.entities;
+package fr.gtm.projetTest;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import fr.gtm.projet.voyage_mock.entities.Client;
 
 public class ClientTest extends Client {
 
