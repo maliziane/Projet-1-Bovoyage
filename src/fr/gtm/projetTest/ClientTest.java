@@ -50,6 +50,9 @@ public class ClientTest {
 		assertEquals(b,c2.getId());
 		
 	
+
+		
+		
 	}
 
 	@Test
