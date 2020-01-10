@@ -14,6 +14,7 @@ import fr.gtm.projet.voyage_mock.entities.Voyageur;
 	private static Long id=0L;
 	List<Voyage> voyages = new ArrayList<Voyage>();
 	List<Voyageur> voyageurs = new ArrayList<Voyageur>();
+	List<Client> clients = new ArrayList<Client>();
 
 	public VoyageMockDao() {
 		id=0L;
