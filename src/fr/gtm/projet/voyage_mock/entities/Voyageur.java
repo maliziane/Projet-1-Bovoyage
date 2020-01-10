@@ -1,6 +1,8 @@
 package fr.gtm.projet.voyage_mock.entities;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Voyageur {
 	
@@ -10,7 +12,25 @@ public class Voyageur {
 	private Date dateNaisance;
 	private String numero;
 	private Long id;
+	List<Long> idVoyages=new ArrayList<Long>() ;
 	
+	
+public void addIdVoyage(Long idVoyage) {
+		
+			idVoyages.add(idVoyage);
+		}
+	}
+	}
+
+	public List<Long> getIdVoyages() {
+		return idVoyages;
+	}
+
+
+	public void setIdVoyages(List<Long> idVoyages) {
+		this.idVoyages = idVoyages;
+	}
+
 
 	public String getCivilite() {
 		return civilite;                                                                                    
@@ -72,14 +92,11 @@ public class Voyageur {
 	}
 
 
-	public Voyageur(String civilite, String nom, String prenom, Date dateNaisance, String numero, Long id) {
-		this.civilite = civilite;
+	public Voyageur(String nom) {
 		this.nom = nom;
-		this.prenom = prenom;
-		this.dateNaisance = dateNaisance;
-		this.numero = numero;
-		this.id = id;
+
 	}
+
 	
 }
 

@@ -1,11 +1,14 @@
 package fr.gtm.projet.voyage_mock.entities;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Client {
 	
 	private String nom;
 	private String numero;
 	private Long id;
+	List<Voyage> voyages=new ArrayList<Voyage>();
 	
 	public String getNom() {
 		return nom;
@@ -31,10 +34,21 @@ public class Client {
 		this.id = id;
 	}
 
-	public Client(String nom, String numero, Long id) {
+	public List<Voyage> getVoyages() {
+		return voyages;
+	}
+
+	public void setVoyages(List<Voyage> voyages) {
+		this.voyages = voyages;
+	}
+	
+	public void addVoyage(Voyage v) {
+		voyages.add(v);
+	}
+	
+	public Client(String nom, String numero) {
 		this.nom = nom;
 		this.numero = numero;
-		this.id = id;
 	}
 
 }
