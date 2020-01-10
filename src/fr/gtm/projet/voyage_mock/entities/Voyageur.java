@@ -19,8 +19,8 @@ public void addIdVoyage(Long idVoyage) {
 		
 			idVoyages.add(idVoyage);
 		}
-	}
-	}
+	
+	
 
 	public List<Long> getIdVoyages() {
 		return idVoyages;
